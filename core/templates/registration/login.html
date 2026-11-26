@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Вход</title>
+<h1>Вход</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Войти</button>
+</form>
+{% if form.errors %}<p>Неверный логин или пароль.</p>{% endif %}
+
